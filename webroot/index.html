@@ -27,7 +27,8 @@
 
   </div>-->
 
-  <table hx-indicator=".htmx-indicator" class="dfl-table">
+  <table hx-indicator=".htmx-indicator" class="dfl-table"
+         hx-get="/dynamic/users" hx-trigger="load" hx-target="find tbody">
     <caption>Users</caption>
     <thead>
     <tr>
@@ -37,8 +38,6 @@
       <th>Actions</th>
     </thead>
     <tbody>
-    <tr hx-get="/dynamic/users" hx-trigger="load" hx-swap="outerHTML">
-    </tr>
     </tbody>
   </table>
   <div>
