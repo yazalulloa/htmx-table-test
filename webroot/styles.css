@@ -1,0 +1,82 @@
+* {
+  font-family: arial, sans-serif;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  flex-basis: auto;
+  justify-content: space-between;
+  gap: 8px;
+  background-color: lightgray;
+  border-radius: 10px;
+  box-shadow: 2px 1px 1px black;
+  margin: 5px;
+  padding: 10px;
+}
+
+.htmx-indicator {
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+}
+
+.htmx-request .htmx-indicator {
+  opacity: 1
+}
+
+.htmx-request.htmx-indicator {
+  opacity: 1
+}
+
+.fade-me-out .htmx-swapping {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-small-size {
+  width: 80px;
+  height: 80px;
+}
+
+.center-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+}
+
+.delete-btn {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  border-radius: 50%;
+}
+
+.delete-btn:hover {
+  background-color: lightslategrey;
+}
+
+.delete-btn:active {
+  background-color: lightyellow;
+}
+
+.dfl-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td {
+  text-align: center;
+}

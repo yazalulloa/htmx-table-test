@@ -1,0 +1,11 @@
+version: '3'
+services:
+  cmy-vx:
+    container_name: htmx-table-test
+    image: htmx-table-test:latest
+    restart: always
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./templates:/app/templates
+      - ./webroot:/app/webroot

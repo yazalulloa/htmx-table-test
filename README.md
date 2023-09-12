@@ -1,0 +1,1 @@
+Project to show error at sending multiple updates using hx-swap-oob with a table with HTMX

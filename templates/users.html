@@ -1,0 +1,31 @@
+<span id="total-count" hx-swap-oob="true" th:with="value=|Total: ${total_count}|"
+      th:text="${total_count} != null ? ${value}  : ''"></span>
+
+<span id="query-count" hx-swap-oob="true" th:with="value=|Items: ${query_count}|"
+      th:text="${query_count} != null ? ${value}  : ''"></span>
+
+<tbody>
+<tr th:each="user: ${results}"
+    th:with="card_id=|user-card-${user.id}|"
+    th:attr="id=${card_id}"
+
+>
+  <td th:text="${user.id}"></td>
+  <td th:text="${user.name}"></td>
+  <td th:text="${user.email}"></td>
+  <td>
+    <button class="delete-btn" th:if="${user.delete_item_url} != null"
+            th:attr="hx-delete=${user.delete_item_url},hx-target=${'#' + card_id}"
+            hx-trigger="click"
+            hx-swap="delete"
+    >
+      <img src="/assets/trash.svg" alt="delete-row">
+    </button>
+  </td>
+</tr>
+
+<tr th:if="${next_page_url} != null" th:attr="hx-get=${next_page_url}"
+    hx-trigger="revealed"
+    hx-swap="outerHTML">
+</tr>
+</tbody>

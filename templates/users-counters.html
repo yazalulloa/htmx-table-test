@@ -1,0 +1,5 @@
+<span id="total-count" hx-swap-oob="true" th:with="value=|Total: ${total_count}|"
+      th:text="${total_count} != null ? ${value}  : ''"></span>
+
+<span id="query-count" hx-swap-oob="true" th:with="value=|Items: ${query_count}|"
+      th:text="${query_count} != null ? ${value}  : ''"></span>

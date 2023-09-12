@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HMTX Table test</title>
+  <link href="styles.css" rel="stylesheet"/>
+  <script src="https://unpkg.com/htmx.org@1.9.5"
+          integrity="sha384-xcuj3WpfgjlKF+FXhSQFQ0ZNr39ln+hwjN3npfM9VBnUskLolQAcN80McRIVOPuO"
+          crossorigin="anonymous"></script>
+  <meta name="htmx-config" content='{"useTemplateFragments":"true"}'>
+</head>
+<body>
+
+<div>
+
+  <div>
+    <span id="total-count"></span>
+    <span id="query-count"></span>
+    <input type="text" name="q"
+           placeholder="Buscar..."
+    >
+  </div>
+
+
+  <div id="buildings-table" hx-get="/dynamic/card/users" hx-trigger="load" hx-swap="outerHTML">
+    <img id="first-bars" class="htmx-indicator center img-small-size" src="/assets/bars.svg" alt="spinner">
+  </div>
+
+</div>
+
+</body>
+</html>
